@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Efectos y Animaciones</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .card {
+            background: white;
+            margin: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: calc(33% - 20px);
+            box-sizing: border-box;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .image {
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s;
+        }
+
+        .image:hover {
+            transform: scale(1.1);
+        }
+
+        p {
+            text-align: justify;
+            animation: slideIn 1s ease forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                width: calc(100% - 20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido a la Página de Efectos y Animaciones</h1>
+    <p>Esta página muestra diferentes efectos y animaciones usando CSS. A través de transformaciones, transiciones y animaciones, puedes mejorar la experiencia del usuario en tu sitio web.</p>
+
+    <div class="container">
+        <div class="card">
+            <h2>Cristiano Ronaldo 3</h2>
+            <p>Cristiano Ronaldo, considerado uno de los mejores futbolistas de todos los tiempos, ha dejado una huella imborrable en la historia del fútbol. Nacido en Madeira, Portugal, su ética de trabajo y dedicación lo han llevado a ganar múltiples Balones de Oro y a establecer récords en clubes como el Manchester United, Real Madrid y Juventus. Su estilo de juego, velocidad y habilidad para marcar goles lo han convertido en un ícono global.</p>
+            <img src="https://img.a.transfermarkt.technology/portrait/header/8198-1694609670.jpg?lm=1" alt="Cr7" class="image">
+        </div>
+        <div class="card">
+            <h2>Lionel Messi 1</h2>
+            <p>Lionel Messi, el prodigio argentino, ha deslumbrado al mundo con su talento excepcional desde muy joven. A lo largo de su carrera, principalmente con el FC Barcelona, ha conseguido numerosos títulos y premios, incluyendo múltiples Balones de Oro. Su capacidad para driblar, crear jugadas y anotar goles de manera sorprendente lo distingue como uno de los grandes del deporte. En 2021, Messi hizo historia al unirse al Paris Saint-Germain, donde continúa su legado.</p>
+            <img src="data:image/webp;base64,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" alt="messi" class="image">
+        </div>
+        <div class="card">
+            <h2>O Rei Pelé 2</h2>
+            <p>Pelé, conocido como "O Rei" (El Rey), es un verdadero símbolo del fútbol mundial. Nacido en Brasil, Pelé revolucionó el deporte en la década de 1960 con su juego elegante y habilidades impresionantes. Ganador de tres Copas del Mundo, su legado va más allá de los títulos; es un embajador del fútbol que ha inspirado a generaciones. Pelé no solo marcó goles, sino que también unió a las personas a través de su pasión por el juego.</p>
+            <img src="data:image/webp;base64,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" alt="pele" class="image">
+        </div>
+    </div>
+
+    <h2>Más Información</h2>
+    <p>Gracias por visitar esta página. Para más información, puedes consultar los recursos sobre CSS para seguir aprendiendo sobre efectos, animaciones y diseño web.</p>
+</body>
+</html>
+
